@@ -8,7 +8,14 @@
 function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
-    return result;
+
+    //    n * n-1 * n-2 * ... 1
+    //     5 * 4 * 3 * 2 * 1
+
+    for (let index = 1;  index <= n-1; index++) {
+        result = result * (index + 1)        
+    }
+    return result
 }
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
