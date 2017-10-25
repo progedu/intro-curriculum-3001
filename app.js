@@ -10,7 +10,6 @@ function factorial(n) {
     for (let i = 1; i <= n; i++) {
         result = result * i
     }
-    console.log(result);
     return result;
 }
 const assert = require('assert');
