@@ -2,17 +2,33 @@
 /**
 * 与えられた自然数の階乗を返す
 * 階乗とは、1からその与えられた自然数までの数をすべてかけたものです
+* 1からの自然数以外を与えた場合はエラーにするよですよ
 * @param {Number} n
 * @returns {Number}
 */
 function factorial(n) {
+    if (typeof n !== "number") {
+        throw new Error("数字だよ！数字！");
+    } 
+    if (n < 1) {
+        throw new Error("0以下なんてダメよ！");
+    }
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for (var i = 1; i <= n; i++) {
+        result = result * i;
+    }
     return result;
 }
+
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
+assert.throws(
+    () => factorial('100'), Error
+);
+assert.throws(
+    () => factorial(-100), Error
+);
 console.log('すべてのテストを通過しました');
