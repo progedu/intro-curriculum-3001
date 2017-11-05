@@ -7,6 +7,9 @@
 */
 function factorial(n) {
     let result = 1;
+    for (n; n>0; n--){
+        result = result * n;
+    }
     // TODO このコメントを消して正しく実装してください。
     return result;
 }
