@@ -3,7 +3,7 @@
 * 与えられた自然数の階乗を返す
 * 階乗とは、1からその与えられた自然数までの数をすべてかけたものです
 * @param {Number} n
-* @returns {Number}
+* @returns {Number} 階乗値
 */
 function factorial(n) {
     let result = 1;
