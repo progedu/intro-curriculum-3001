@@ -9,7 +9,7 @@ function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
     for (let index = 1; index <= n; index++) {
-        result = result * index;
+        result *= index;
     }
     return result;
 }
