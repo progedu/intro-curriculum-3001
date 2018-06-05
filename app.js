@@ -6,8 +6,11 @@
 * @returns {Number}
 */
 function factorial(n) {
+    const number = process.argv[2] || 1;
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for (var i = 1; i <= n; i++) {
+      result = result * i;
+    }
     return result;
 }
 const assert = require('assert');
