@@ -12,10 +12,6 @@ function factorial(n) {
         result = result * i;
     }
 
-    if (n == 1){
-        result = 1;
-    }
-
     return result;
 }
 const assert = require('assert');
