@@ -7,7 +7,11 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    let i = 1;
+    while (i <= n) {
+        result *= i;
+        i += 1;
+    }
     return result;
 }
 const assert = require('assert');
