@@ -11,7 +11,6 @@ function factorial(n) {
     for (let i = 1; i < n; i++) {
         result *= i + 1;
     }
-    // TODO このコメントを消して正しく実装してください。
     return result;
 }
 
