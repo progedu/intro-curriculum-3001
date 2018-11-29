@@ -10,6 +10,14 @@ function factorial(n) {
     for (let i = 1; i <= n; i++) {
         result = result * i;
     }
+    /**
+     * for 以降、下記も可
+     * let i = 1;
+     * while (i <= n) {
+     *   result = result * i;
+     *   i++;
+     * }
+     */
     return result;
 }
 const assert = require('assert');
@@ -18,3 +26,19 @@ assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2)
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3)}でした`);
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10)}でした`);
 console.log('すべてのテストを通過しました');
+
+/**
+ * 0 の扱いが不思議。if else で 0 を特別扱いするとエラー。Truthy, Falsy と関係？
+ * function factorial(n) {
+ *  let result = 1;
+ *  // 0 が入力された場合 1 を返す
+ *  if (n = 0) {
+ *       result = 1;
+ *   } else {
+ *       for (let i = 1; i <= n; i++) {
+ *           result = result * i;
+ *       }
+ *   }
+ *   return result;
+ * }
+ */
