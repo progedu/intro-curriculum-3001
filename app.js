@@ -7,12 +7,10 @@
 */
 function factorial(n) {
     let result = 1;
-    let sum = 1;
     for (let i = 1; i <= n; i++) {
-        sum = sum * i
+        result = result * i
         ;
     }
-    result = sum;
     return result;
 }
 const assert = require('assert');
@@ -21,3 +19,4 @@ assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2)
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
 console.log('すべてのテストを通過しました');
+console.log(factorial(process.argv[2] || 0));
