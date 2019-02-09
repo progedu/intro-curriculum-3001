@@ -6,8 +6,10 @@
 * @returns {Number}
 */
 function factorial(n) {
-    let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    let result = 1;　//最初に1を与えるため
+    for(let i =1; i <= n; i++){
+        result = result * i;
+    }
     return result;
 }
 const assert = require('assert');
@@ -16,3 +18,9 @@ assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2)
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
 console.log('すべてのテストを通過しました');
+
+// factorialは階乗という意味
+//n=4なら1*1 1*2 2*3 6*4で２４　4！は24
+// １の方からnの階乗の答えになるまでかけていく
+// const assert = require('assert');　の部分はNode.js が持つアサーションという機能を、オブジェクトとして読み込む記述方法
+//  ` (バッククオート) で囲まれている文字列は、 ${プログラム内の値} という形式の文字列を含めることで、変数の値を埋め込むことができる Template Literal という機能
