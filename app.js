@@ -7,7 +7,12 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+
+    // 問題は自然数のため、i=1から開始する。
+    // 与えられた自然数「まで」を乗じるため、<=とする。
+    for (let i = 1 ; i <= n ; i++) {
+        result *= i;
+    }
     return result;
 }
 const assert = require('assert');
