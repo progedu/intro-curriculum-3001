@@ -11,7 +11,7 @@ function factorial(n) {
         result = result * i;
     }
     return result;
-// 終わりましたー
+// 終わりましたー　//試し
 }
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
