@@ -7,7 +7,11 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    // for文で1以上の自然数の場合にresultにresultのi乗させる。
+    for (let i = 1; i <= n; i++ ) {
+        result = result * i;
+    }
+    // 抜けたら終わり。
     return result;
 }
 const assert = require('assert');
