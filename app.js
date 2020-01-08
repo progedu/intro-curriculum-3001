@@ -8,6 +8,17 @@
 function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
+    let kaijo = n;
+    if(n == 0){
+        result = 0;
+    }
+    else{
+        for(let i = 0; i < n; i++){
+            result = kaijo * result;
+            kaijo = kaijo - 1;
+        }
+    }
+
     return result;
 }
 const assert = require('assert');
