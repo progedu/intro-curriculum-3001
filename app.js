@@ -7,7 +7,6 @@
 */
 function factorial(n) {
     let result = 1;
-    // const n = process.args[2] || 0;
     for (let i = 1; i <= n; i ++) {
         result *= i;
     }
