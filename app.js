@@ -7,8 +7,9 @@
 */
 function factorial(n) {
     let result = 1;
-    for (let i = 1; i <= process.arbv[2] || 0; i++{
+    for (let i = 1; i <= n; i++) {
          result = result * i;
+        }
     return result;
 }
 const assert = require('assert');
