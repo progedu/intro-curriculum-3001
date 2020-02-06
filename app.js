@@ -8,8 +8,6 @@
 let result = 1;
 let a = 0;
 function factorial(n) {
-  
-
   if (n == 0){
     a = result;
     result=1;
