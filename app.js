@@ -8,6 +8,20 @@
 function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
+    /*
+    //この手の問題、なんだか再帰を求められている気がして、無理やり再帰してしまう。
+    result = result * n;
+    if (n === 1){
+        //return result;
+    } else {
+        n = n -1;
+        factorial(n);
+    }
+    */
+   for(let i = 1; i <= n; i++){
+       result = result * i;
+   }
+
     return result;
 }
 const assert = require('assert');
