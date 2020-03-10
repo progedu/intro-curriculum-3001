@@ -8,6 +8,12 @@
 function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
+    if( n < 1 ){
+        return undefined;
+    }
+    for(let i=1;i <= n; i++){
+        result *= i;
+    }
     return result;
 }
 const assert = require('assert');
