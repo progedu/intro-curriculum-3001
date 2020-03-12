@@ -7,10 +7,14 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for(let i = 1 ; i <= n ; i++){
+        result *= i;
+    }
     return result;
 }
+//assertをオブジェクトとして使う
 const assert = require('assert');
+//${}とすると、内部の変数や関数の返り値の値を参照することができる。
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
