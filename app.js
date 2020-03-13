@@ -15,7 +15,7 @@ function factorial(n) {
 
 const number = process.argv[2] || 0;
 const answer = factorial(number);
-console.log(answer);
+console.log(`${number}! = ${answer}`);
 
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
