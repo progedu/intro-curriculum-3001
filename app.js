@@ -6,21 +6,12 @@
 * @returns {Number}
 */
 function factorial(n) {
-    let result = 1;
-    // TODO このコメントを消して正しく実装してください。
-    for(let i=1;i<=n;i++){
-        /*
-        if(n==1){
-            return result=0;
-        }else if(n==2){
-            return result=2;
-        }else{
-            
-        }
-        */
-       result=result*i;
-    }
-    return result;
+  let result = 1;
+  // TODO このコメントを消して正しく実装してください。
+  for(let i=1;i<=n;i++) {
+      result*=i;
+  }
+  return result;
 }
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
@@ -28,3 +19,17 @@ assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2)
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
 console.log('すべてのテストを通過しました');
+//・既にあるプロジェクト
+//フォーク→クローン
+//git add .
+//git commit -m "コメント"
+//git push origin master 
+
+//・ローカルでディレクトリを作ってから,githubに手動でプロジェクトを作った場合
+//GitHubで同名のプロジェクトを作る
+//git init 
+//git add .
+//git commit -m "コメント"
+
+//git remote add origin git@github.com ........
+//git push -u origin master
