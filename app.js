@@ -7,7 +7,22 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    // 5! = 5*4*3*2*1
+   /*  降下
+        while(n > 0) {
+            result *= n;
+            n--;
+        }
+    */
+   /* 再帰
+        if(n != 0) 
+            return n * factorial(n-1);
+        return 1; 
+    */
+    for(let i = 1; i <= n; i++) {
+        result *= i;
+    }
+    
     return result;
 }
 const assert = require('assert');
