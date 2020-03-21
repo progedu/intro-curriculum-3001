@@ -6,14 +6,6 @@
  * @returns {Number}
  */
 function factorial(n) {
-  let result = 1;
-
-  // 解答例
-  //   for (let i = 1; i <= n; i++) {
-  //     result = result * i;
-  //   }
-  //   return result;
-
   // 再帰
   if (n < 2) return 1;
   return n * factorial(n - 1);
