@@ -6,11 +6,10 @@
 * @returns {Number}
 */
 function factorial(n) {
-    let result = n;
     if (n === 1) {
         return 1;
     }
-    return result * factorial(n-1);
+    return n * factorial(n-1);
 }
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
