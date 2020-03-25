@@ -7,13 +7,9 @@
 */
 function factorial(n) {
     let result = 1;
-    'use strict'
-
-
-for(let i=0;i<=number ;i++){
-    product=product+i
-}
-console.log (product);
+    for (let i=1;i<=n;i++){
+        result=result*i
+    }
     return result;
 }
 const assert = require('assert');
