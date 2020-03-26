@@ -7,7 +7,16 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    
+    const number = n;
+    let sum = 1;
+
+    for(let i = 1; i <= number; i++){
+        sum = sum * i;
+    }
+
+    result = sum;
+
     return result;
 }
 const assert = require('assert');
