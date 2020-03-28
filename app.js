@@ -1,4 +1,5 @@
 'use strict';
+
 /**
 * 与えられた自然数の階乗を返す
 * 階乗とは、1からその与えられた自然数までの数をすべてかけたものです
@@ -7,9 +8,14 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+
+    for (let i = n; i >= 1 ; i--) {
+        result *= i;
+    }
+
     return result;
 }
+
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
