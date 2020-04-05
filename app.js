@@ -5,9 +5,16 @@
 * @param {Number} n
 * @returns {Number}
 */
+const number = process.argv[2] || 0;
+
 function factorial(n) {
+	
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    
+	for (let i = 1; i <= number; i++) {
+             result = result * i;
+	} 
+		
     return result;
 }
 const assert = require('assert');
