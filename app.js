@@ -5,14 +5,18 @@
 * @param {Number} n
 * @returns {Number}
 */
+var sm = [ ]; sm[ 0 ] = 1;
+for(let i=1; i<=15; i++) {
+    sm [ i ] = sm [ i - 1 ] * i;
+}
+
 function factorial(n) {
-    let result = 1;
-    // TODO このコメントを消して正しく実装してください。
-    return result;
+    return sm[ n ] ;
 }
 const assert = require('assert');
-assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
-assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
-assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
-assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
+assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }が出力されました`);
+assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }が出力されました`);
+assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }が出力されました`);
+assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }が出力されました`);
 console.log('すべてのテストを通過しました');
+// AC!
