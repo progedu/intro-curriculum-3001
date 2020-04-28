@@ -5,10 +5,13 @@
 * @param {Number} n
 * @returns {Number}
 */
+const n = process.argv[2] || 0;
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
-    return result;
+    for(let i = n; i > 0 ; i--){
+	    result = result * i ;
+   }
+	return result;
 }
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
