@@ -7,11 +7,13 @@
 */
 function factorial(n) {
     let result = 1;
-    for (let num = 0; 0 < n; num++){
-        result = result * num;
+    for (let i = 1; i <= n; i++){
+        result *= i;
     }
     return result;
 }
+
+
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
