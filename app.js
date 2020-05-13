@@ -6,12 +6,14 @@
 * @returns {Number}
 */
 function factorial(n) {
+
+    if (n < 0) { return; }; //ガード節
+    
     let result = 1;
     // 階乗の計算をする
-    for (let i = n; 0 < i; i--) {
-        result *= i ;
+    for (n; 0 < n; n--) {
+        result *= n;
     } // for
-
     return result;
 } // factorial()
 const assert = require('assert'); // Node.js のアサーション機能を、オブジェクトとして読み込む
@@ -20,8 +22,6 @@ assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2)
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
 console.log('すべてのテストを通過しました');
-// test用
-console.log(factorial(4)); 
 
 /*Template Literal という機能
 
