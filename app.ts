@@ -10,16 +10,23 @@
 * deno 実行時にオプション --importmap=maps.json --unstable を付与する
 */
 import { assertEquals } from 'assert';
-function factorial(n: Number) {
-    let result: Number;
+// 連番の生成
+const range = (start: number, end: number) => Array.from({length: (end - start + 1)}, (_, i) => start + i);
+// 階乗
+const reducer = (accumulator: number, currentValue: number) => accumulator * currentValue;
+function factorial(n: number) {
+    let result: number;
     // 引数が1以下の場合には引数を結果とする
     if ( n <= 1) {
         result = n;
+        return result;
     } else {
-        result = 2;
+        const targetArray: Array<number> = range(1, n);
+        result = targetArray.reduce(reducer);
+        return result;
     }
-    return result;
 }
+
 assertEquals(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assertEquals(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
 assertEquals(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
