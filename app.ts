@@ -10,8 +10,8 @@
 * deno 実行時にオプション --importmap=maps.json --unstable を付与する
 */
 import { assertEquals } from 'assert';
-function factorial(n) {
-    let result = 1;
+function factorial(n: Number) {
+    let result: Number = 1;
     // TODO このコメントを消して正しく実装してください。
     return result;
 }
