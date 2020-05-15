@@ -7,7 +7,24 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+
+/*
+メモ；
+let:変数宣言　再代入できるやつ
+
+ループ処理を使うのを思いつきもしなかった。
+https://www.nnn.ed.nico/courses/668/chapters/9514
+
+初期化式： 処理の前提になる　ex)let i = 0;だとダメ
+条件式：nの回数以内まで
+変化式はテンプレート？　
+実行したい処理：result = result * 1;
+
+*/
+
+    for (let i = 1; i <= n; i++) {
+        result = result * i;
+    }
     return result;
 }
 const assert = require('assert');
