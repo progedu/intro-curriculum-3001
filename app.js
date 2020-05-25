@@ -5,12 +5,19 @@
 * @param {Number} n
 * @returns {Number}
 */
+var n = process.argv[2] || 0;
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for (let i = 1; i <= n; i++) {
+	result = result * i;
+    }
+
     return result;
+
 }
 const assert = require('assert');
+
+console.log('answer = ' + factorial(n));
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
 assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3) }でした`);
