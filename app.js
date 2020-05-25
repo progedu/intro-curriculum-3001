@@ -6,7 +6,11 @@
 * @returns {Number}
 */
 function factorial(n) {
-    let result = 1;
+    let result=1;
+    for(var i=0;i<n;i++)
+    {
+        result = result*(i+1);
+    }
     // TODO このコメントを消して正しく実装してください。
     return result;
 }
