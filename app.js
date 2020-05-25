@@ -11,7 +11,6 @@ function factorial(n) {
     {
         result = result*(i+1);
     }
-    // TODO このコメントを消して正しく実装してください。
     return result;
 }
 const assert = require('assert');
