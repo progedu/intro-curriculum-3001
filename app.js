@@ -5,6 +5,7 @@
 * @param {Number} n
 * @returns {Number}
 */
+const number = process.argv[2] || 0;
 function factorial(n) {
   let result = 1;
   for (let i = 1; i <= n; i++) {
