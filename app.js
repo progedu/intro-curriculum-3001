@@ -7,9 +7,7 @@
 */
 function factorial(n) {
     let result = 1;
-    if (n === 1) {
-        return 1;
-    } else {
+    if (n !== 1) {
         result = n * factorial(n - 1);
     }
     return result;
