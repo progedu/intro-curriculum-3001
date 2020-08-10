@@ -1,4 +1,6 @@
 'use strict';
+const number= process.argv[2] || 0;
+factorial(number);
 /**
 * 与えられた自然数の階乗を返す
 * 階乗とは、1からその与えられた自然数までの数をすべてかけたものです
@@ -7,7 +9,9 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for(let i=n;i>0;i--){
+        result=result*i;
+    }
     return result;
 }
 const assert = require('assert');
