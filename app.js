@@ -6,8 +6,12 @@
 * @returns {Number}
 */
 function factorial(n) {
+    let num = n;
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    while(num !== 1){
+        result = result * num;
+        num = num -1
+    }
     return result;
 }
 const assert = require('assert');
