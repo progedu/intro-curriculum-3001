@@ -7,7 +7,10 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for(let i = n; 1<=n; i--){
+       result= result * i;
+       console.log("iが" + i + "のとき"　+ result);
+    }
     return result;
 }
 const assert = require('assert');
