@@ -7,7 +7,7 @@
 */
 function factorial(n) {
     let result = 1;
-      for (let i = 1; i <= n; i++) {
+      for (var i = 1; i <= n; i++) {
             result = result * i;
       }
     return result;
@@ -20,4 +20,5 @@ assert.equal(factorial(3), 6, `3の階乗は6ですが、実際は${factorial(3)
 assert.equal(factorial(10), 3628800, `10の階乗は3628800ですが、実際は${factorial(10) }でした`);
 console.log('すべてのテストを通過しました');
 
-console.log("20190823 N予備校生授業")
+console.log("20190823 N予備校生授業");
+console.log("20200904 N予備校生授業");
