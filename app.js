@@ -7,8 +7,14 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
-    return result;
+    for(let i = 1; i <=n; i++)
+    //初期化式：変数iに１を代入　条件式：iがn以下の時ループ　変化式：iが１大きくなる
+    
+    {
+       result= result * i;　//結果。階乗なので前のループの答えの値にiの値が掛け算になる。
+       console.log("iが" + i +"のとき" +result);//例：「iが1の時1」と出力
+    }
+    return result;　//返り値。factrial(n)の結果を出しきったら関数を終了　
 }
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
