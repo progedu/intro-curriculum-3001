@@ -5,11 +5,27 @@
 * @param {Number} n
 * @returns {Number}
 */
-function factorial(n) {
-    let result = 1;
-    // TODO このコメントを消して正しく実装してください。
-    return result;
+
+function factorial(n, result = 1) {
+    // その１
+    /* while(n){
+        result = result * n;
+        n--;
+    }
+    return result; */
+
+    // その２
+    /* const vec = Array.from(new Array(n)).map((v,i)=> i + 1);
+    return vec.reduce((acc, cur) => acc * cur); */
+
+    // その３
+    if (n  == 1){
+        return result;
+    }
+    result *= n;
+    return factorial(n - 1, result);
 }
+
 const assert = require('assert');
 assert.equal(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.equal(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
