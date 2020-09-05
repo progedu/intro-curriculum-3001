@@ -7,8 +7,9 @@
 */
 function factorial(n) {
     let result = 1;
-    for(let i=2; i<=n; i++){
+    for(let i=1; i<=n; i++){
         result *= i;
+        console.log("iが" + i + "の時" + result)
     }
     return result;
 }
