@@ -8,6 +8,18 @@
 function factorial(n) {
     let result = 1;
     // TODO このコメントを消して正しく実装してください。
+    //1以上の階乗を求める関数を実装する
+    let result = 1;
+    //関数実行時に与えられる数字がn
+    //iは１から始まる
+    //iが与えられた数字よりも小さい時
+    //iに１を足していく
+    //例えばn=5の時は、reult = 1*1 result =1*2 result =2*3 result=6*4 result=24*5
+    for(let i = 1; i <= n; i++){
+        result = result *i;
+    }
+
+
     return result;
 }
 const assert = require('assert');
