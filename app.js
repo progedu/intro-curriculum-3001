@@ -7,7 +7,11 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for (let i = 1; i <= n; i++){ //または　let i = n; i >1 ; i--)※54321と減っていくスタイル
+        console.log("iが"+ i + "のとき"　+　result);
+        result = result * i;
+        console.log("iが"+ i + "のとき"　+　result);
+    }
     return result;
 }
 const assert = require('assert');
