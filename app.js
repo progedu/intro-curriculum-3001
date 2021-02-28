@@ -7,7 +7,10 @@
 */
 function factorial(n) {
     let result = 1;
-    // TODO このコメントを消して正しく実装してください。
+    for(let i = n ; i > 0 ; i--){
+        result *= i;
+    }
+    console.log(`${n}の階乗は${result}です`);
     return result;
 }
 const assert = require('assert');
