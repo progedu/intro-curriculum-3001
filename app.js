@@ -6,7 +6,10 @@
 * @returns {Number}
 */
 function factorial(n) {
-    let result = 1;
+    let result = 1
+    for (let i=1;i<=n;i++){
+      result *=i;
+    }
     // TODO このコメントを消して正しく実装してください。
     return result;
 }
